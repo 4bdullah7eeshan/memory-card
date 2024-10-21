@@ -36,6 +36,8 @@ function Main() {
     const handleCardClick = (id) => {
         if (clickedCards.includes(id)) {
             // game over
+            setGameOver(true);
+            // will have to move the following elsewhere:
             setCurrentScore(0);
             setClickedCards([]);
             if (currentScore > bestScore) {
@@ -73,6 +75,17 @@ function Main() {
                     </div>
                 ))}
             </div>
+
+            {gameOver && (
+                <div className="modal">
+                    <div className="modal-content">
+                        <h2>Game Over</h2>
+                        <p>Your Score: {currentScore}</p>
+                        <p>Best Score: {bestScore}</p>
+                        <button>Restart Game</button>
+                    </div>
+                </div>
+            )}
         </main>
     )
 
