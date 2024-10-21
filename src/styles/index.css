@@ -1,9 +1,24 @@
 /* index.css */
 
+@font-face {
+    font-family: 'PokemonSolid';
+    src: url('/fonts/Pokemon Solid.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PokemonGb';
+    src: url('/fonts/PokemonGb-RAeo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'PokemonGb';
 }
 
 html, body, #root {
@@ -15,6 +30,7 @@ body, #root {
     display: flex;
     flex-direction: column;
     line-height: 1.5;
+    background-color: #FFCB05;
 }
 
 .logo {
@@ -25,6 +41,14 @@ body, #root {
     padding: 0.5rem;
     text-align: center;
 }
+
+.logo h1,
+h2,
+h3 {
+    font-family: 'PokemonSolid';
+    letter-spacing: 1rem;
+}
+
 
 main {
     flex-grow: 1;
@@ -39,7 +63,7 @@ main {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(5, 150px);
+    grid-template-columns: repeat(5, 170px);
     gap: 2rem;
     justify-content: center;
 }
@@ -67,6 +91,10 @@ main {
     height: auto;
 }
 
+.card p {
+    font-family: 'PokemonGb';
+}
+
 .modal {
     position: fixed;
     top: 0;
@@ -77,6 +105,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
 }
 
 .modal-content {

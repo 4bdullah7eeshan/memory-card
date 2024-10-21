@@ -2,7 +2,7 @@ function Header() {
     return (
         <header className='logo'>
             <h1>
-                Memory Card
+                MEMORY CARD
             </h1>
         </header>
     );
