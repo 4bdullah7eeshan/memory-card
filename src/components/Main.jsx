@@ -68,7 +68,7 @@ function Main() {
 
     useEffect(() => {
         fetchCards();
-    }, []);
+    }, [difficulty]);
 
     return (
         <main>
