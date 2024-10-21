@@ -43,6 +43,8 @@ function Main() {
             
         } else {
             // game continues
+            setClickedCards([...clickedCards, id]);
+            setCurrentScore(currentScore + 1);
             
         }
         
