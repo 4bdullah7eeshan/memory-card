@@ -8,6 +8,8 @@ function Main() {
     const [clickedCards, setClickedCards] = useState([]);
     const [gameOver, setGameOver] = useState(false);
     const [difficulty, setDifficulty] = useState('easy');
+    const [gameWon, setGameWon] = useState(false);
+
 
     const getNumberOfCards = () => {
         if (difficulty === 'easy') return 5;
