@@ -37,9 +37,7 @@ function Main() {
         if (clickedCards.includes(id)) {
             // game over
             setGameOver(true);
-            // will have to move the following elsewhere:
-            setCurrentScore(0);
-            setClickedCards([]);
+
             if (currentScore > bestScore) {
                 setBestScore(currentScore);
             }
@@ -53,6 +51,13 @@ function Main() {
         }
         setCards(shuffleCards(cards));
         
+    };
+
+    const restartGame = () => {
+        setCurrentScore(0);
+        setClickedCards([]);
+        setGameOver(false);
+        fetchCards();
     };
 
     useEffect(() => {
@@ -82,7 +87,7 @@ function Main() {
                         <h2>Game Over</h2>
                         <p>Your Score: {currentScore}</p>
                         <p>Best Score: {bestScore}</p>
-                        <button>Restart Game</button>
+                        <button onClick={restartGame}>Restart Game</button>
                     </div>
                 </div>
             )}
