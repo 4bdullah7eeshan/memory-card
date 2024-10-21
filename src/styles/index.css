@@ -73,7 +73,7 @@ select {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(5, 170px);
+    grid-template-columns: repeat(5, 200px);
     gap: 2rem;
     justify-content: center;
 }
@@ -97,7 +97,7 @@ select {
 }
   
 .card img {
-    width: 100px;
+    width: 150px;
     height: auto;
 }
 
