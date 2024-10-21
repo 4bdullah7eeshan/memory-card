@@ -22,6 +22,10 @@ function Main() {
 
     };
 
+    useEffect(() => {
+        fetchCards();
+    }, []);
+
     return (
         <main>
             <div className='scoreboard'>
