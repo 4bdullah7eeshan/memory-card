@@ -45,6 +45,7 @@ function Main() {
         if (clickedCards.includes(id)) {
             // game over
             setGameOver(true);
+            setGameWon(false);
 
             if (currentScore > bestScore) {
                 setBestScore(currentScore);
@@ -53,8 +54,17 @@ function Main() {
             
         } else {
             // game continues
+            const newClickedCards = [...clickedCards, id];
             setClickedCards([...clickedCards, id]);
             setCurrentScore(currentScore + 1);
+
+            if (newClickedCards.length === getNumberOfCards()) {
+                setGameOver(true);
+                setGameWon(true); // Player wins
+                if (currentScore > bestScore) {
+                    setBestScore(currentScore);
+                }
+            }
             
         }
         setCards(shuffleCards(cards));
@@ -106,6 +116,7 @@ function Main() {
                 <div className="modal">
                     <div className="modal-content">
                         <h2>Game Over</h2>
+                        <h3>{gameWon ? "Congratulations! You won!" : "You Lose! Try Again!"}</h3>
                         <p>Your Score: {currentScore}</p>
                         <p>Best Score: {bestScore}</p>
                         <button onClick={restartGame}>Restart Game</button>
