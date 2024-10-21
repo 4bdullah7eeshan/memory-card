@@ -27,6 +27,10 @@ function Main() {
 
     };
 
+    const handleCardClick = (id) => {
+        
+    };
+
     useEffect(() => {
         fetchCards();
     }, []);
