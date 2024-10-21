@@ -20,7 +20,7 @@ function Main() {
                 name: result.data.name,
                 image: result.data.sprites.front_default,
             }));
-            setCards(pokemonData);
+            setCards(shuffleCards(pokemonData));
         } catch (error) {
             console.error('Error fetching Pokémon:', error);
         }
