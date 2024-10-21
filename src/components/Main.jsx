@@ -11,8 +11,8 @@ function Main() {
 
     const getNumberOfCards = () => {
         if (difficulty === 'easy') return 5;
-        if (difficulty === 'medium') return 8;
-        return 12;
+        if (difficulty === 'medium') return 10;
+        return 15;
     };
 
     const shuffleCards = (cards) => {
