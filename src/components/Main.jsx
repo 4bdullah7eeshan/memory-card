@@ -3,6 +3,8 @@ import axios from 'axios';
 
 function Main() {
     const [cards, setCards] = useState([]);
+    const [clickedCards, setClickedCards] = useState([]);
+
 
     const shuffleCards = (cards) => {
         return cards.sort(() => Math.random() - 0.5);
