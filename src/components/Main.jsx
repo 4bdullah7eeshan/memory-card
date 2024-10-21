@@ -21,8 +21,9 @@ function Main() {
 
     const fetchCards = async () => {
         try {
+            const numberOfCards = getNumberOfCards();
             const promises = [];
-            for (let i = 1; i <= 5; i++ ) {
+            for (let i = 1; i <= numberOfCards; i++ ) {
                 promises.push(axios.get(`https://pokeapi.co/api/v2/pokemon/${i}`));
             }
             const results = await Promise.all(promises);
