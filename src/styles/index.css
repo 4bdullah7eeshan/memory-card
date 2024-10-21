@@ -139,7 +139,11 @@ select {
 footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 1rem;
+}
+
+footer a {
+    text-decoration: none;
 }
