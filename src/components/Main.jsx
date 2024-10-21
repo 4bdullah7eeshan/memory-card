@@ -36,6 +36,12 @@ function Main() {
 
             <div className='cards'>
                 {/* card will be mapped and placed here */}
+                {cards.map((card) => (
+                    <div key={card.id} className="card">
+                        <img src={card.image} alt={card.name} />
+                        <p>{card.name}</p>
+                    </div>
+                ))}
             </div>
         </main>
     )
