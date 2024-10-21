@@ -116,7 +116,9 @@ function Main() {
                 <div className="modal">
                     <div className="modal-content">
                         <h2>Game Over</h2>
-                        <h3>{gameWon ? "Congratulations! You won!" : "You Lose! Try Again!"}</h3>
+                        <h3 style={{ color: gameWon ? '#78C850' : '#ff0000' }}>
+                            {gameWon ? "Congratulations! You won!" : "You Lose! Try Again!"}
+                        </h3>
                         <p>Your Score: {currentScore}</p>
                         <p>Best Score: {bestScore}</p>
                         <button onClick={restartGame}>Restart Game</button>
