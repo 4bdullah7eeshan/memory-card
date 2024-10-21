@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function Main() {
+    const [currentScore, setCurrentScore] = useState(0);
+    const [bestScore, setBestScore] = useState(0);
     const [cards, setCards] = useState([]);
     const [clickedCards, setClickedCards] = useState([]);
 
