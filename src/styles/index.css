@@ -67,6 +67,10 @@ main {
 
 }
 
+select {
+    padding: 0.5rem;
+}
+
 .cards {
     display: grid;
     grid-template-columns: repeat(5, 170px);
