@@ -9,6 +9,10 @@ function Main() {
                 <p>Score: </p>
                 <p>Best Score: </p>
             </div>
+
+            <div className='cards'>
+                {/* card will be mapped and placed here */}
+            </div>
         </main>
     )
 
