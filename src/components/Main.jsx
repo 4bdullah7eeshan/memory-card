@@ -30,6 +30,13 @@ function Main() {
     };
 
     const handleCardClick = (id) => {
+        if (clickedCards.includes(id)) {
+            // game over
+            
+        } else {
+            // game continues
+            
+        }
         
     };
 
