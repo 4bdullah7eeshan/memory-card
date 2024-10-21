@@ -9,7 +9,11 @@ function Main() {
     const [gameOver, setGameOver] = useState(false);
     const [difficulty, setDifficulty] = useState('easy');
 
-
+    const getNumberOfCards = () => {
+        if (difficulty === 'easy') return 5;
+        if (difficulty === 'medium') return 8;
+        return 12;
+    };
 
     const shuffleCards = (cards) => {
         return cards.sort(() => Math.random() - 0.5);
