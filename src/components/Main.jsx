@@ -4,6 +4,10 @@ import axios from 'axios';
 function Main() {
     const [cards, setCards] = useState([]);
 
+    const shuffleCards = (cards) => {
+        return cards.sort(() => Math.random() - 0.5);
+    };
+
     const fetchCards = async () => {
         try {
             const promises = [];
