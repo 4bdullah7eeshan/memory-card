@@ -6,6 +6,8 @@ function Main() {
     const [bestScore, setBestScore] = useState(0);
     const [cards, setCards] = useState([]);
     const [clickedCards, setClickedCards] = useState([]);
+    const [gameOver, setGameOver] = useState(false);
+
 
 
     const shuffleCards = (cards) => {
