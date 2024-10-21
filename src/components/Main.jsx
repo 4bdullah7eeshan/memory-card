@@ -58,14 +58,14 @@ function Main() {
     return (
         <main>
             <div className='scoreboard'>
-                <p>Score: </p>
-                <p>Best Score: </p>
+                <p>Score: {currentScore}</p>
+                <p>Best Score: {bestScore}</p>
             </div>
 
             <div className='cards'>
                 {/* card will be mapped and placed here */}
                 {cards.map((card) => (
-                    <div key={card.id} className="card">
+                    <div key={card.id} className="card" onClick={() => handleCardClick(card.id)}>
                         <img src={card.image} alt={card.name} />
                         <p>{card.name}</p>
                     </div>
