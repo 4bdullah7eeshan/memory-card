@@ -10,6 +10,11 @@ function Main() {
                 promises.push(axios.get(`https://pokeapi.co/api/v2/pokemon/${i}`));
             }
             const results = await Promise.all(promises);
+            const pokemonData = results.map((result) => ({
+                id: result.data.id,
+                name: result.data.name,
+                image: result.data.sprites.front_default,
+            }));
 
         } catch (error) {
             console.error('Error fetching Pokémon:', error);
