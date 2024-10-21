@@ -7,6 +7,7 @@ function Main() {
     const [cards, setCards] = useState([]);
     const [clickedCards, setClickedCards] = useState([]);
     const [gameOver, setGameOver] = useState(false);
+    const [difficulty, setDifficulty] = useState('easy');
 
 
 
