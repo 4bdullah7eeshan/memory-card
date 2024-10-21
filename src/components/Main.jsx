@@ -5,7 +5,10 @@ function Main() {
 
     return (
         <main>
-
+            <div className='scoreboard'>
+                <p>Score: </p>
+                <p>Best Score: </p>
+            </div>
         </main>
     )
 
