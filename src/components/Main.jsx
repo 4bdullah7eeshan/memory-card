@@ -84,6 +84,10 @@ function Main() {
 
     return (
         <main>
+            <div>
+                <p>Click on a Pokémon card, but not more than once!</p>
+            </div>
+
             <div className="difficulty">
                 <label htmlFor="difficulty-select">Select Difficulty: </label>
                 <select 
