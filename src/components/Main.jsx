@@ -47,6 +47,7 @@ function Main() {
             setCurrentScore(currentScore + 1);
             
         }
+        setCards(shuffleCards(cards));
         
     };
 
