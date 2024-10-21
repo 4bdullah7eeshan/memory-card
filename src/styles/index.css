@@ -30,7 +30,7 @@ body, #root {
     display: flex;
     flex-direction: column;
     line-height: 1.5;
-    background-color: #FFCB05;
+    /* background-color: #FFCB05; */
 }
 
 .logo {
@@ -42,11 +42,17 @@ body, #root {
     text-align: center;
 }
 
-.logo h1,
-h2,
-h3 {
+.logo h1 {
     font-family: 'PokemonSolid';
     letter-spacing: 1rem;
+    color: #FFCB05;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow:
+        -2px -2px 0 #3B4CCA,
+         2px -2px 0 #3B4CCA,
+        -2px  2px 0 #3B4CCA,
+         2px  2px 0 #3B4CCA;
 }
 
 
