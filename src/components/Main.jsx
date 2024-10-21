@@ -34,6 +34,12 @@ function Main() {
     const handleCardClick = (id) => {
         if (clickedCards.includes(id)) {
             // game over
+            setCurrentScore(0);
+            setClickedCards([]);
+            if (currentScore > bestScore) {
+                setBestScore(currentScore);
+            }
+            
             
         } else {
             // game continues
