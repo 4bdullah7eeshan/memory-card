@@ -3,6 +3,20 @@ import axios from 'axios';
 
 function Main() {
 
+    const fetchCards = async () => {
+        try {
+            const promises = [];
+            for (let i = 1; i <= 5; i++ ) {
+                promises.push(axios.get(`https://pokeapi.co/api/v2/pokemon/${i}`));
+            }
+            const results = await Promise.all(promises);
+
+        } catch (error) {
+            console.error('Error fetching Pokémon:', error);
+        }
+
+    };
+
     return (
         <main>
             <div className='scoreboard'>
