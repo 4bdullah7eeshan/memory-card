@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function Main() {
+    const [cards, setCards] = useState([]);
 
     const fetchCards = async () => {
         try {
