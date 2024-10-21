@@ -115,10 +115,20 @@ main {
 }
 
 .modal-content {
-    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #58ABF6;
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
+}
+
+.modal-content button {
+    background-color: #F7D02C;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 
